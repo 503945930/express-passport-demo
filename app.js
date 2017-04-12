@@ -49,6 +49,14 @@ app.get('/internal/session', (req, res, next) => {
   }
 })
 
+  // get user
+app.get('/internal/users', (req, res, next) => {
+  res.send([
+    { id: 1, username: '18381334402', password: 'root', displayName: 'Jack' },
+   { id: 2, username: '18575740461', password: 'root', displayName: 'Jill' }
+  ])
+})
+
 if (!module.parent) {
   app.listen(3001)
 }
