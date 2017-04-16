@@ -9,7 +9,7 @@ test('app.js  login', async t => {
   const mobile = '18381334402'
   const code = 'root'
   const encoded = new Buffer(`${mobile}:${code}`).toString('base64')
- // console.log('encoded', encoded)
+  console.log('encoded', encoded)
   try {
     let res = await app.post(`/auth/mobile/login`)
                                 .set('Authorization', `Basic ${encoded}`)
